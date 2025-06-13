@@ -1,0 +1,27 @@
+Conceptual Problems
+Jawab pertanyaan berikut:
+
+1. Jelaskan latar belakang adanya bagging dan cara kerja bagging !
+
+2. Jelaskan perbedaan cara kerja algoritma Random Forest dengan algoritma boosting yang Anda pilih !
+
+3. Jelaskan apa yang dimaksud dengan Cross Validation !
+
+
+Jawaban
+
+1. Bagging adalah singkatan dari Bootstrap AGGregating dimana Bagging mengkombinasikan (ensamble) dua teknik machine learning tersebut 
+    agar model yang dibuat dapat berjalan lebih baik. Teknik ini ada karena overfitting sering terjadi ketika model terlalu sensitif terhadap training data, 
+    bukan mempelajari pola tetapi model “menghafal” data tersebut sehingga dapat menyebabkan model menunjukkan performa sangat baik pada training data, 
+    namun menurun secara signifikan saat diuji pada data yang belum pernah dilihat sebelumnya (mencegah overfitting).
+
+
+2. Random Forest dan XGBoost adalah dua algoritma yang membuat decision tree, tetapi keduanya bekerja dengan cara yang berbeda. 
+    Random Forest menggunakan rata-rata atau voting untuk menggabungkan prediksi model dengan algoritma tersebut. 
+    Sedangkan boosting yang menggunakan decision tree secara bertahap. Setiap pohon baru ditujukan untuk memperbaiki kesalahan yang dibuat oleh pohon sebelumnya, 
+    sehingga model belajar dari kesalahan dengan lebih efektif. 
+
+
+3. Cross validation digunakan untuk mengevaluasi performa model dengan lebih akurat dan untuk mengurangi kemungkinan overfitting. 
+    Metode ini membagi data menjadi berbagai bagian, atau fold. Kemudian, model dilatih pada sebagian fold dan diuji pada fold yang tersisa. 
+    Sehingga setiap bagian data dapat diubah menjadi data uji dan proses ini dilakukan beberapa kali.
