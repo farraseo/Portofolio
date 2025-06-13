@@ -1,0 +1,48 @@
+This program is aims to create tables and insert the dataset into a PostgreSQL database.
+
+
+===========================================
+URL DATASET
+===========================================
+Dataset URL: https://www.kaggle.com/datasets/salahuddinahmedshuvo/grocery-inventory-and-sales-dataset
+
+CREATE TABLE table_M3 (
+
+	Product_ID VARCHAR Primary Key, 
+	Product_Name VARCHAR,
+	Catagory VARCHAR,
+	Supplier_ID VARCHAR,
+    Supplier_Name VARCHAR, 
+	Stock_Quantity INT,
+	Reorder_Level INT, 
+	Reorder_Quantity INT,
+    Unit_Price VARCHAR,
+	Date_Received VARCHAR, 
+	Last_Order_Date VARCHAR, 
+	Expiration_Date VARCHAR,
+    Warehouse_Location VARCHAR, 
+	Sales_Volume INT, 
+	Inventory_Turnover_Rate INT,
+    Status VARCHAR)
+   ;
+
+
+COPY table_m3(Product_ID, Product_Name, 'Catagory, Supplier_ID,
+       Supplier_Name, Stock_Quantity', Reorder_Level, Reorder_Quantity,
+       Unit_Price, Date_Received, 'Last_Order_Date', 'Expiration_Date',
+       Warehouse_Location, Sales_Volume, Inventory_Turnover_Rate,
+       Status)
+FROM '/data/P2M3_Farras_Annisa_data_raw.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
+
+
+
+
+
+
+
+
